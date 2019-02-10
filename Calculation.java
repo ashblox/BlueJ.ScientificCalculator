@@ -7,11 +7,12 @@
  */
 
     // instance variables - replace the example below with your own
-public class Calculator
-{
+public class Calculation
+{   double m;
     public static double multiply(double fNum, double sNum)
     {
-        return fNum * sNum;
+         double m = fNum* sNum;
+        return m;
     }
     
     public static double divide(double fNum, double sNum)
