@@ -20,28 +20,28 @@ public class Calculator
    
    public static void add() {
        double firstNumber = Display.getNumber();
-       double secondNumber = Display.getNumber();
+       double secondNumber = Display.getOtherNumber();
        result = firstNumber + secondNumber;
        Display.println(result);
    }
    
    public static void subtract() {
        double firstNumber = Display.getNumber();
-       double secondNumber = Display.getNumber();
+       double secondNumber = Display.getOtherNumber();
        result = firstNumber - secondNumber;
        Display.println(result);
    }
    
    public static void multiply() {
        double firstNumber = Display.getNumber();
-       double secondNumber = Display.getNumber();
+       double secondNumber = Display.getOtherNumber();
        result = firstNumber * secondNumber;
        Display.println(result);
    }
    
    public static void divide() {
        double firstNumber = Display.getNumber();
-       double secondNumber = Display.getNumber();
+       double secondNumber = Display.getOtherNumber();
        if (secondNumber == 0) {
            Display.printLine("Err");
        } else {
@@ -68,7 +68,7 @@ public class Calculator
    
    public static void exponentiate() {
        double firstNumber = Display.getNumber();
-       double secondNumber = Display.getNumber();
+       double secondNumber = Display.getOtherNumber();
        result = Math.pow(firstNumber, secondNumber);
        Display.println(result);
    }
@@ -131,9 +131,8 @@ public class Calculator
    }
    
    public static void inverseLog() {
-       double firstNumber = Display.getNumber();
-       double secondNumber = Display.getNumber();
-       result = Math.pow(firstNumber, secondNumber);
+       double number = Display.getNumber();
+       result = Math.pow(10, number);
        Display.println(result);
    }
    

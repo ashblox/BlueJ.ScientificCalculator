@@ -28,14 +28,40 @@ public class Display
         System.out.println(prompt);
     }
     
-    public static String getOperation() {
-        printLine("What operation do you want to perform?");
+    public static String getKindOfOperation() {
+        printLine("What kind of operation do you want to perform? < basic, trigonometric, or logarithmic >");
+        String kind = input.nextLine();
+        return kind;
+    }
+    
+    public static String getBasicOperation() {
+        printLine("What would you like to do? < add, subtract, multiply, divide, square, square root, exponentiate, inverse, or factorial >");
+        String operation = input.nextLine();
+        return operation;
+    }
+    
+    public static String getTrigOperation() {
+        printLine("Which trig function would you like to use? < sine, cosine, tangent, inverse sine, inverse cosine, inverse tangent >");
+        String operation = input.nextLine();
+        return operation;
+    }
+    
+    public static String getLogOperation() {
+        printLine("Which log function would you like to use? < log, inverse log, natural log, inverse natural log >");
         String operation = input.nextLine();
         return operation;
     }
     
     public static double getNumber(){
         printLine("What number do you want to use?");
+        double number = input.nextDouble();
+        input.nextLine();
+        state = number;
+        return number;
+    }
+    
+    public static double getOtherNumber(){
+        printLine("What other number do you want to use?");
         double number = input.nextDouble();
         input.nextLine();
         state = number;

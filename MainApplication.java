@@ -1,4 +1,3 @@
-
 /* Create a scientific calculator that utilizes user input and shows results
  * on display.
  * Created by ashblox, yangtree21st, ajahdailey 
@@ -12,17 +11,27 @@ public class MainApplication {
     public static void main(String[] args) {
 
         while (true) {
-            String operation = Display.getOperation();
-            if ("quit".equals(operation)) {
+            String kind = Display.getKindOfOperation();
+            String operation = "";
+            if ("quit".equals(kind)) {
                 break;
-            } else {
+            } else if ("basic".equals(kind)){
+                operation = Display.getBasicOperation();
                 run(operation);
+            } else if ("trigonometric".equals(kind)){
+                operation = Display.getTrigOperation();
+                run(operation);
+            } else if ("logarithmic".equals(kind)){
+                operation = Display.getLogOperation();
+                run(operation);
+            }
+            //} else {
+            //    run(kind);
             }
         }
 
-    }
+    
     public static void run(String operation) {
-        
         switch (operation) {
             case "add":
                 Calculator.add();
@@ -48,16 +57,16 @@ public class MainApplication {
             case "inverse":
                 Calculator.inverse();
                 break;
-            case "sin":
+            case "sine":
                 Calculator.sin();
                 break;
-            case "cos":
+            case "cosine":
                 Calculator.cos();
                 break;   
-            case "tan":
+            case "tangent":
                 Calculator.tan();
                 break;
-            case "inverse sin":
+            case "inverse sine":
                 Calculator.sinh();
                 break;
             case "inverse cosine":
@@ -81,10 +90,9 @@ public class MainApplication {
             case "inverse natural log":
                 Calculator.inverseNaturalLog();
                 break; 
-            }
-            
         }
         
        
     }
+}
       
