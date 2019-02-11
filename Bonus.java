@@ -7,10 +7,10 @@
  */
 import java.lang.Math; 
 import java.math.BigInteger;
-public class Bonus{
+public  class Bonus{
     // instance variables - replace the example below with your own
     
-    public BigInteger factoria(double value){
+    public static BigInteger factoria(double value){
         BigInteger f = new BigInteger("1");
         for (int i =1;i<=value;i++){
             f = f.multiply(BigInteger.valueOf(i));
