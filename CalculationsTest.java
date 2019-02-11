@@ -86,13 +86,13 @@ public class CalculationsTest{
         }
     @Test
     public void testAdd2(){
-        double firstNum = 1027;
-        double secondNum = 3245;
+        double firstNumber = 1027;
+        double secondNumber = 3245;
         
         double expected = 4272;
-        double actual = Calculation.add(firstNum, secondNum);
+        Calculator.add();
         
-        Assert.assertEquals(expected, actual, 0);
+        Assert.assertEquals(expected, Calculator.result, 0);
     }
     @Test
     public void testAdd3(){
