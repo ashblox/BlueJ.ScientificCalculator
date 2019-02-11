@@ -7,6 +7,7 @@
  */
 
 import java.util.Scanner;
+import java.math.BigInteger;
 
 public class Display
 {
@@ -72,6 +73,5 @@ public class Display
         System.out.println(number);
         state = number;
     }
-    
     
 }

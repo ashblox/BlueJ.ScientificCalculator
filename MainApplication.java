@@ -66,6 +66,21 @@ public class MainApplication {
             case "inverse tangent":
                 Calculator.tanh();
                 break;    
+            case "factorial":
+                Calculator.factorial();
+                break; 
+            case "log":
+                Calculator.log();
+                break; 
+            case "inverse log":
+                Calculator.inverseLog();
+                break; 
+            case "natural log":
+                Calculator.naturalLog();
+                break; 
+            case "inverse natural log":
+                Calculator.inverseNaturalLog();
+                break; 
             }
             
         }

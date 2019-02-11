@@ -7,6 +7,7 @@
  */
 
 import java.util.Scanner;
+import java.math.BigInteger;
 
 public class Calculator
 {
@@ -114,5 +115,37 @@ public class Calculator
        Display.println(result);
    }
    
+   public static void factorial() {
+       double number = Display.getNumber();
+       double result = 1;
+       for (double i = number; i > 0; i--) {
+           result = result * i;
+       }
+       Display.println(result);
+   }
    
+   public static void log() {
+       double number = Display.getNumber();
+       result = Math.log10(number);
+       Display.println(result);
+   }
+   
+   public static void inverseLog() {
+       double firstNumber = Display.getNumber();
+       double secondNumber = Display.getNumber();
+       result = Math.pow(firstNumber, secondNumber);
+       Display.println(result);
+   }
+   
+   public static void naturalLog() {
+       double number = Display.getNumber();
+       result = Math.log(number);
+       Display.println(result);
+   }
+   
+   public static void inverseNaturalLog() {
+       double number = Display.getNumber();
+       result = Math.pow(Math.E, number);
+       Display.println(result);
+   } 
 }
